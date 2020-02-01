@@ -3,14 +3,14 @@ set -e
 
 ARCH=$(uname -m)
 DOCKER_BINARY=/usr/bin/docker
-DOCKER_REPO=homeassistant
+DOCKER_REPO=oilab
 DOCKER_SERVICE=docker.service
-URL_VERSION="https://version.home-assistant.io/stable.json"
-URL_BIN_HASSIO="https://raw.githubusercontent.com/home-assistant/hassio-installer/master/files/hassio-supervisor"
-URL_BIN_APPARMOR="https://raw.githubusercontent.com/home-assistant/hassio-installer/master/files/hassio-apparmor"
-URL_SERVICE_HASSIO="https://raw.githubusercontent.com/home-assistant/hassio-installer/master/files/hassio-supervisor.service"
-URL_SERVICE_APPARMOR="https://raw.githubusercontent.com/home-assistant/hassio-installer/master/files/hassio-apparmor.service"
-URL_APPARMOR_PROFILE="https://version.home-assistant.io/apparmor.txt"
+URL_VERSION="https://raw.githubusercontent.com/baurzhan/hassio-installer/master/files/version.json"
+URL_BIN_HASSIO="https://raw.githubusercontent.com/baurzhan/hassio-installer/master/files/hassio-supervisor"
+URL_BIN_APPARMOR="https://raw.githubusercontent.com/baurzhan/hassio-installer/master/files/hassio-apparmor"
+URL_SERVICE_HASSIO="https://raw.githubusercontent.com/baurzhan/hassio-installer/master/files/hassio-supervisor.service"
+URL_SERVICE_APPARMOR="https://raw.githubusercontent.com/baurzhan/hassio-installer/master/files/hassio-apparmor.service"
+URL_APPARMOR_PROFILE="https://raw.githubusercontent.com/baurzhan/hassio-installer/master/files/apparmor.txt"
 
 # Check env
 command -v systemctl > /dev/null 2>&1 || { echo "[Error] Only systemd is supported!"; exit 1; }
