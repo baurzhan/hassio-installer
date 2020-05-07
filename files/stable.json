@@ -40,8 +40,8 @@
   "audio": "14",
   "multicast": "2",
   "image": {
-    "core": "homeassistant/{machine}-homeassistant",
-    "supervisor": "homeassistant/{arch}-hassio-supervisor",
+    "core": "oilab/{machine}-homeassistant",
+    "supervisor": "oilab/{arch}-hassio-supervisor",
     "cli": "homeassistant/{arch}-hassio-cli",
     "audio": "homeassistant/{arch}-hassio-audio",
     "dns": "homeassistant/{arch}-hassio-dns",
