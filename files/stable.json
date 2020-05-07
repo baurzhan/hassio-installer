@@ -20,20 +20,31 @@
     "odroid-xu": "0.109.4"
   },
   "hassos": {
-    "ova": "3.8",
-    "rpi": "3.8",
-    "rpi0-w": "3.8",
-    "rpi2": "3.8",
-    "rpi3": "3.8",
-    "rpi3-64": "3.8",
-    "rpi4": "3.8",
-    "rpi4-64": "3.8",
-    "tinker": "3.8",
-    "odroid-c2": "3.8",
-    "odroid-n2": "4.0",
-    "odroid-xu4": "3.8",
-    "intel-nuc": "3.8"
+    "ova": "3.13",
+    "rpi": "3.13",
+    "rpi0-w": "3.13",
+    "rpi2": "3.13",
+    "rpi3": "3.13",
+    "rpi3-64": "3.13",
+    "rpi4": "3.13",
+    "rpi4-64": "3.13",
+    "tinker": "3.13",
+    "odroid-c2": "3.13",
+    "odroid-n2": "4.5",
+    "odroid-xu4": "3.13",
+    "intel-nuc": "3.13"
   },
-  "hassos-cli": "15",
-  "dns": "1"
+  "hassos-cli": "19",
+  "cli": "25",
+  "dns": "9",
+  "audio": "14",
+  "multicast": "2",
+  "image": {
+    "core": "homeassistant/{machine}-homeassistant",
+    "supervisor": "homeassistant/{arch}-hassio-supervisor",
+    "cli": "homeassistant/{arch}-hassio-cli",
+    "audio": "homeassistant/{arch}-hassio-audio",
+    "dns": "homeassistant/{arch}-hassio-dns",
+    "multicast": "homeassistant/{arch}-hassio-multicast"
+  }
 }
