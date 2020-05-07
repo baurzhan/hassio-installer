@@ -7,6 +7,8 @@ CONFIG_FILE=%%HASSIO_CONFIG%%
 SUPERVISOR="$(jq --raw-output '.supervisor' ${CONFIG_FILE})"
 HOMEASSISTANT="$(jq --raw-output '.homeassistant' ${CONFIG_FILE})"
 DATA="$(jq --raw-output '.data // "/usr/share/hassio"' ${CONFIG_FILE})"
+TMP=${HOMEASSISTANT#*/}   # remove prefix ending in "/"
+MACHINE=${TMP%-*}   # remove suffix starting with "-"
 
 # AppArmor Support
 if command -v apparmor_parser > /dev/null 2>&1 && grep hassio-supervisor /sys/kernel/security/apparmor/profiles > /dev/null 2>&1; then
@@ -34,6 +36,7 @@ runSupervisor() {
         -e SUPERVISOR_SHARE="${HASSIO_DATA}" \
         -e SUPERVISOR_NAME=hassio_supervisor \
         -e HOMEASSISTANT_REPOSITORY="${HOMEASSISTANT}" \
+        -e SUPERVISOR_MACHINE="${MACHINE}" \
         "${SUPERVISOR}"
 }
 
